@@ -14,17 +14,19 @@
 # VSCode
 .vscode/
 
-#exclude python env
+# exclude python env
 env/
 
+# Node.js dependencies
 node_modules/
 
+# Vite build output
 dist/
 
-#exclude env
+# exclude env
 .env
 
-#package lock file
+# package lock file
 yarn.lock
 
 # Test Python cache
