@@ -1,0 +1,15 @@
+[default]
+description = "Default permissions for the plugin"
+permissions = ["core:default",
+    "core:path:default",
+    "core:event:default",
+    "core:window:default",
+    "core:window:allow-set-title",
+    "core:window:allow-set-position",
+    "core:app:default",
+    "core:menu:default",
+    "core:resources:default",
+    "core:webview:default",
+    "fs:default",
+    "dialog:allow-save",
+    "dialog"default"]

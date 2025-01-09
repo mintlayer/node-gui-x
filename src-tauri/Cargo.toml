@@ -1,0 +1,73 @@
+[package]
+name = "node-gui-x"
+description = "Mintlayer Node GUI X"
+homepage = "https://mintlayer.org"
+repository = "https://github.com/mintlayer/node-gui-x"
+readme = "README.md"
+license = "MIT"
+version = "1.0.0"
+authors = []
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "mintlayer_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0.3", features = [] }
+
+[dependencies]
+parity-scale-codec = "3.1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1.27", default-features = false }
+
+tauri = { version = "2.1.1", features = [] }
+tauri-plugin-dialog = "2.2.0"
+tauri-plugin-fs = "2.2.0"
+
+chainstate = {git = "https://github.com/mintlayer/mintlayer-core", package = "chainstate",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6"}
+common = { git = "https://github.com/mintlayer/mintlayer-core", package = "common",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6" }
+node-gui-backend = { git = "https://github.com/mintlayer/mintlayer-core", package = "node-gui-backend",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6"}
+wallet = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6" }
+wallet-controller = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-controller",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6" }
+wallet-types = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-types",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6" }
+wallet-rpc-lib = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-rpc-lib",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6"}
+
+[features]
+# this feature is used for production builds or when `devPath` points to the filesystem
+# DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]
+
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"
+
+[profile.dev]
+panic = "abort" # prevent panic catching (mostly for the tokio runtime)
+
+[profile.release]
+panic = "abort" # prevent panic catching (mostly for the tokio runtime)
+overflow-checks = true
+
+# "Release" profile with debug info enabled.
+[profile.release-with-debug-info]
+inherits = "release"
+debug = true
+
+# "Release" profile with debug info and debug assertions enabled.
+[profile.release-with-debug]
+inherits = "release"
+debug = true
+debug-assertions = true
+
+[profile.test]
+debug-assertions = true
+overflow-checks = true
+
+[profile.test.package.script]
+opt-level = 2
