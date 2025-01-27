@@ -21,13 +21,11 @@ node_modules/
 
 dist/
 
-**/gen/schemas/
+src-tauri/gen/
+src-tauri/target/
 
 #exclude env
 .env
-
-#package lock file
-yarn.lock
 
 # Test Python cache
 test/**/__pycache__
