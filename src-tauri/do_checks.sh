@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 cargo fmt --check -- --config newline_style=Unix
 
 # Install cargo deny first with: cargo install cargo-deny
