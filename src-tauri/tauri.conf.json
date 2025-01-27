@@ -6,10 +6,8 @@
   "build": {
     "beforeDevCommand": "yarn dev",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "yarn build",
-    "frontendDist": "../dist"
+    "beforeBuildCommand": "yarn build"
   },
-
   "app": {
     "windows": [
       {
@@ -27,7 +25,6 @@
       "csp": null
     }
   },
-
   "bundle": {
     "active": true,
     "targets": "all",
