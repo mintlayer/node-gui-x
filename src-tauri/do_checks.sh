@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
-
 cargo fmt --check -- --config newline_style=Unix
 
 # Install cargo deny first with: cargo install cargo-deny
@@ -31,7 +28,3 @@ cargo clippy --all-features --workspace --lib --bins --examples -- \
     -D clippy::items_after_statements \
     -D clippy::fallible_impl_from \
     -D clippy::string_slice
-
-# Install requirements with: pip install -r ./build-tools/codecheck/requirements.txt
-
-# Ensure that wasm documentation is up-to-date

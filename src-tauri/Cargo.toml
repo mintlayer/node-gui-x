@@ -8,6 +8,7 @@ license = "MIT"
 version = "1.0.0"
 authors = []
 edition = "2021"
+rust-version = "1.84"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -19,27 +20,27 @@ name = "mintlayer_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]
-tauri-build = { version = "2.0.3", features = [] }
+tauri-build = { version = "2.0", features = [] }
 
 [dependencies]
 parity-scale-codec = "3.1"
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
+serde = { version = "1.0" }
+serde_json = "1.0"
 tokio = { version = "1.27", default-features = false }
 
-tauri = { version = "2.1.1", features = [] }
-tauri-plugin-dialog = "2.2.0"
-tauri-plugin-fs = "2.2.0"
+tauri = { version = "2.2", features = [] }
+tauri-plugin-dialog = "2.2"
+tauri-plugin-fs = "2.2"
+tauri-plugin-process = "2.2"
 
 
-chainstate = {git = "https://github.com/mintlayer/mintlayer-core", package = "chainstate",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6"}
-common = { git = "https://github.com/mintlayer/mintlayer-core", package = "common",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6" }
-node-gui-backend = { git = "https://github.com/mintlayer/mintlayer-core", package = "node-gui-backend",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6"}
-wallet = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6" }
-wallet-controller = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-controller",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6" }
-wallet-types = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-types",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6" }
-wallet-rpc-lib = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-rpc-lib",  rev="1c8c0b408df886b6d1ad3ed9114dcf421cde85d6"}
-tauri-plugin-process = "2"
+chainstate = {git = "https://github.com/mintlayer/mintlayer-core", package = "chainstate",  rev="2ea4a5c"}
+common = { git = "https://github.com/mintlayer/mintlayer-core", package = "common",  rev="2ea4a5c" }
+node-gui-backend = { git = "https://github.com/mintlayer/mintlayer-core", package = "node-gui-backend",  rev="2ea4a5c"}
+wallet = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet",  rev="2ea4a5c" }
+wallet-controller = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-controller",  rev="2ea4a5c" }
+wallet-types = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-types",  rev="2ea4a5c" }
+wallet-rpc-lib = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-rpc-lib",  rev="2ea4a5c"}
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem
