@@ -11,7 +11,7 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
-// limitations under the License.#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+// limitations under the License.
 
 use common::chain::DelegationId;
 use node_gui_backend::{

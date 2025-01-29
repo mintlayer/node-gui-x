@@ -131,7 +131,7 @@ pub async fn get_stake_pool_maturity_distance(
 
 fn emit_event_or_error<T>(app_handle: &AppHandle, event_name: &str, r: Result<T, BackendError>)
 where
-    T: serde::Serialize + Clone + std::fmt::Debug,
+    T: serde::Serialize + Clone,
 {
     match r {
         Ok(data) => {
