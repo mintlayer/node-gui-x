@@ -34,13 +34,14 @@ tauri-plugin-fs = "2.2"
 tauri-plugin-process = "2.2"
 
 
-chainstate = {git = "https://github.com/mintlayer/mintlayer-core", package = "chainstate",  rev="2ea4a5c"}
-common = { git = "https://github.com/mintlayer/mintlayer-core", package = "common",  rev="2ea4a5c" }
-node-gui-backend = { git = "https://github.com/mintlayer/mintlayer-core", package = "node-gui-backend",  rev="2ea4a5c"}
-wallet = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet",  rev="2ea4a5c" }
-wallet-controller = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-controller",  rev="2ea4a5c" }
-wallet-types = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-types",  rev="2ea4a5c" }
-wallet-rpc-lib = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-rpc-lib",  rev="2ea4a5c"}
+chainstate = {git = "https://github.com/mintlayer/mintlayer-core", package = "chainstate",  rev="75166cb"}
+common = { git = "https://github.com/mintlayer/mintlayer-core", package = "common",  rev="75166cb" }
+node-gui-backend = { git = "https://github.com/mintlayer/mintlayer-core", package = "node-gui-backend",  rev="75166cb"}
+node-lib= { git = "https://github.com/mintlayer/mintlayer-core", package = "node-lib",  rev="75166cb"}
+wallet = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet",  rev="75166cb" }
+wallet-controller = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-controller",  rev="75166cb" }
+wallet-types = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-types",  rev="75166cb" }
+wallet-rpc-lib = { git = "https://github.com/mintlayer/mintlayer-core", package = "wallet-rpc-lib",  rev="75166cb"}
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem

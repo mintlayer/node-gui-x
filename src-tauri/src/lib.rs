@@ -28,16 +28,23 @@ use tauri::Manager;
 struct AppState {
     backend_sender: Option<BackendSender>,
     chain_config: Option<Arc<ChainConfig>>,
+    initial_options: node_lib::Options,
     app_handle: tauri::AppHandle,
 }
 
 pub fn run() {
+    // TODO: improve args handling on UI side. Depending on whether command was used
+    // UI can ignore showing Mainnet/Testnet selection screen.
+    // Right now Command is overwritten in the `initialize_node`.
+    let initial_options = node_lib::Options::from_args(std::env::args_os());
+
     tauri::Builder::default()
         .plugin(tauri_plugin_process::init())
         .setup(|app| {
             app.manage(Mutex::new(AppState {
                 backend_sender: None,
                 chain_config: None,
+                initial_options,
                 app_handle: app.handle().clone(),
             }));
             Ok(())

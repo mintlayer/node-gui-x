@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "accounting"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "common",
  "parity-scale-codec",
@@ -83,18 +83,6 @@ dependencies = [
  "getrandom 0.2.15",
  "once_cell",
  "version_check",
-]
-
-[[package]]
-name = "ahash"
-version = "0.8.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e89da841a80418a9b391ebaea17f5c112ffaaa96f621d2c285b5174da76b9011"
-dependencies = [
- "cfg-if",
- "once_cell",
- "version_check",
- "zerocopy",
 ]
 
 [[package]]
@@ -463,7 +451,7 @@ dependencies = [
 [[package]]
 name = "blockprod"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "async-trait",
  "chainstate",
@@ -473,7 +461,7 @@ dependencies = [
  "crypto",
  "futures",
  "hex",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "jsonrpsee",
  "logging",
  "mempool",
@@ -744,7 +732,7 @@ dependencies = [
 [[package]]
 name = "chainstate"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "accounting",
  "async-trait",
@@ -756,7 +744,7 @@ dependencies = [
  "crypto",
  "derive_more 1.0.0",
  "hex",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "jsonrpsee",
  "logging",
  "mintscript",
@@ -787,7 +775,7 @@ dependencies = [
 [[package]]
 name = "chainstate-launcher"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "chainstate",
  "chainstate-storage",
@@ -803,7 +791,7 @@ dependencies = [
 [[package]]
 name = "chainstate-storage"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "accounting",
  "chainstate-types",
@@ -825,7 +813,7 @@ dependencies = [
 [[package]]
 name = "chainstate-types"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "common",
  "crypto",
@@ -958,7 +946,7 @@ dependencies = [
 [[package]]
 name = "common"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "anyhow",
  "bech32",
@@ -968,7 +956,7 @@ dependencies = [
  "fixed-hash",
  "generic-array",
  "hex",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "lazy_static",
  "logging",
  "merkletree-mintlayer",
@@ -1005,12 +993,12 @@ dependencies = [
 [[package]]
 name = "consensus"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "chainstate-types",
  "common",
  "crypto",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "logging",
  "num",
  "parity-scale-codec",
@@ -1025,7 +1013,7 @@ dependencies = [
 [[package]]
 name = "constraints-value-accumulator"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "common",
  "crypto",
@@ -1189,32 +1177,16 @@ checksum = "d0a5c400df2834b80a4c3327b3aad3a4c4cd4de0629063962b03235697506a28"
 
 [[package]]
 name = "crossterm"
-version = "0.27.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f476fe445d41c9e991fd07515a6f463074b782242ccf4a5b7b1d1012e70824df"
-dependencies = [
- "bitflags 2.8.0",
- "crossterm_winapi",
- "libc",
- "mio 0.8.11",
- "parking_lot",
- "serde",
- "signal-hook",
- "signal-hook-mio",
- "winapi",
-]
-
-[[package]]
-name = "crossterm"
 version = "0.28.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "829d955a0bb380ef178a640b91779e3987da38c9aea133b20614cfed8cdea9c6"
 dependencies = [
  "bitflags 2.8.0",
  "crossterm_winapi",
- "mio 1.0.3",
+ "mio",
  "parking_lot",
  "rustix",
+ "serde",
  "signal-hook",
  "signal-hook-mio",
  "winapi",
@@ -1232,7 +1204,7 @@ dependencies = [
 [[package]]
 name = "crypto"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "argon2",
  "bip39",
@@ -1852,6 +1824,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3f9eec918d3f24069decb9af1554cad7c880e2da24a9afd88aca000531ab82c1"
 
 [[package]]
+name = "foldhash"
+version = "0.1.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a0d2fde1f7b3d48b8395d5f2de76c18a528bd6a9cdde438df747bfcba3e05d6f"
+
+[[package]]
 name = "foreign-types"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1905,9 +1883,9 @@ dependencies = [
 
 [[package]]
 name = "fs4"
-version = "0.8.4"
+version = "0.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f7e180ac76c23b45e767bd7ae9579bc0bb458618c4bc71835926e098e61d15f8"
+checksum = "c29c30684418547d476f0b48e84f4821639119c483b1eccd566c8cd0cd05f521"
 dependencies = [
  "rustix",
  "windows-sys 0.52.0",
@@ -2375,16 +2353,7 @@ version = "0.12.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8a9ee70c43aaf417c914396645a0fa852624801b24ebb7ae78fe8272889ac888"
 dependencies = [
- "ahash 0.7.8",
-]
-
-[[package]]
-name = "hashbrown"
-version = "0.14.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e5274423e17b7c9fc20b6e7e208532f9b19825d82dfd615708b70edd83df41f1"
-dependencies = [
- "ahash 0.8.11",
+ "ahash",
 ]
 
 [[package]]
@@ -2392,14 +2361,17 @@ name = "hashbrown"
 version = "0.15.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bf151400ff0baff5465007dd2f3e717f3fe502074ca563069ce3a6629d07b289"
+dependencies = [
+ "foldhash",
+]
 
 [[package]]
 name = "hashlink"
-version = "0.9.1"
+version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6ba4ff7128dee98c7dc9794b6a411377e1404dba1c97deb8d1a55297bd25d8af"
+checksum = "7382cf6263419f2d8df38c55d7da83da5c18aef87fc7a7fc1fb1e344edfe14c1"
 dependencies = [
- "hashbrown 0.14.5",
+ "hashbrown 0.15.2",
 ]
 
 [[package]]
@@ -2876,9 +2848,9 @@ dependencies = [
 
 [[package]]
 name = "itertools"
-version = "0.13.0"
+version = "0.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "413ee7dfc52ee1a4949ceeb7dbc8a33f2d6c088194d9f922fb8318faf1f01186"
+checksum = "2b192c782037fadd9cfa75548310488aabdbf3d2da73885b31bd0abd03351285"
 dependencies = [
  "either",
 ]
@@ -3218,9 +3190,9 @@ dependencies = [
 
 [[package]]
 name = "libsqlite3-sys"
-version = "0.30.1"
+version = "0.31.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2e99fb7a497b1e3339bc746195567ed8d3e24945ecd636e3619d20b9de9e9149"
+checksum = "ad8935b44e7c13394a179a438e0cebba0fe08fe01b54f152e29a93b5cf993fd4"
 dependencies = [
  "cc",
  "pkg-config",
@@ -3281,7 +3253,7 @@ checksum = "04cbf5b083de1c7e0222a7a51dbfdba1cbe1c6ab0b15e29fff3f6c077fd9cd9f"
 [[package]]
 name = "log_error"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "derive_more 1.0.0",
  "proc-macro2",
@@ -3292,7 +3264,7 @@ dependencies = [
 [[package]]
 name = "logging"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "log",
  "thiserror 1.0.69",
@@ -3376,7 +3348,7 @@ dependencies = [
 [[package]]
 name = "mempool"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "accounting",
  "anyhow",
@@ -3415,7 +3387,7 @@ dependencies = [
 [[package]]
 name = "mempool-types"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "p2p-types",
  "rpc-description",
@@ -3464,7 +3436,7 @@ dependencies = [
 [[package]]
 name = "mintscript"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "common",
  "crypto",
@@ -3476,18 +3448,6 @@ dependencies = [
  "tokens-accounting",
  "utils",
  "utxo",
-]
-
-[[package]]
-name = "mio"
-version = "0.8.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a4a650543ca06a924e8b371db273b2756685faae30f8487da1b56505a8f78b0c"
-dependencies = [
- "libc",
- "log",
- "wasi 0.11.0+wasi-snapshot-preview1",
- "windows-sys 0.48.0",
 ]
 
 [[package]]
@@ -3581,7 +3541,7 @@ dependencies = [
 [[package]]
 name = "networking"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "async-trait",
  "bytes",
@@ -3624,7 +3584,7 @@ dependencies = [
 [[package]]
 name = "node-comm"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "async-trait",
  "base64 0.22.1",
@@ -3650,7 +3610,7 @@ dependencies = [
 [[package]]
 name = "node-gui-backend"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "anyhow",
  "chainstate",
@@ -3686,6 +3646,7 @@ dependencies = [
  "chainstate",
  "common",
  "node-gui-backend",
+ "node-lib",
  "parity-scale-codec",
  "serde",
  "serde_json",
@@ -3705,7 +3666,7 @@ dependencies = [
 [[package]]
 name = "node-lib"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "anyhow",
  "blockprod",
@@ -3715,7 +3676,7 @@ dependencies = [
  "common",
  "directories",
  "file-rotate",
- "fs4 0.8.4",
+ "fs4 0.12.0",
  "jsonrpsee",
  "logging",
  "mempool",
@@ -4148,7 +4109,7 @@ dependencies = [
 [[package]]
 name = "orders-accounting"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "accounting",
  "chainstate-types",
@@ -4172,7 +4133,7 @@ checksum = "b15813163c1d831bf4a13c3610c05c0d03b39feb07f7e09fa234dac9b15aaf39"
 [[package]]
 name = "p2p"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "async-trait",
  "chainstate",
@@ -4181,7 +4142,7 @@ dependencies = [
  "dyn-clone",
  "enum-iterator",
  "futures",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "jsonrpsee",
  "lazy_static",
  "logging",
@@ -4214,7 +4175,7 @@ dependencies = [
 [[package]]
 name = "p2p-types"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "common",
  "parity-scale-codec",
@@ -4550,7 +4511,7 @@ dependencies = [
 [[package]]
 name = "pos-accounting"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "accounting",
  "common",
@@ -4872,7 +4833,7 @@ dependencies = [
 [[package]]
 name = "randomness"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "rand 0.8.5",
 ]
@@ -4925,13 +4886,13 @@ dependencies = [
 
 [[package]]
 name = "reedline"
-version = "0.32.0"
+version = "0.38.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "abf59e4c97b5049ba96b052cdb652368305a2eddcbce9bf1c16f9d003139eeea"
+checksum = "9bfa8cb0ad84c396c936d8abb814703d7042a433d2da75a0c7060cbdc89109f3"
 dependencies = [
  "chrono",
  "crossbeam",
- "crossterm 0.27.0",
+ "crossterm",
  "fd-lock",
  "itertools 0.12.1",
  "nu-ansi-term 0.50.1",
@@ -5148,7 +5109,7 @@ checksum = "afab94fb28594581f62d981211a9a4d53cc8130bbcbbb89a0440d9b8e81a7746"
 [[package]]
 name = "rpc"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -5175,7 +5136,7 @@ dependencies = [
 [[package]]
 name = "rpc-description"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "rpc-description-macro",
  "serde_json",
@@ -5184,7 +5145,7 @@ dependencies = [
 [[package]]
 name = "rpc-description-macro"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -5194,7 +5155,7 @@ dependencies = [
 [[package]]
 name = "rpc-types"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "hex",
  "rpc-description",
@@ -5205,9 +5166,9 @@ dependencies = [
 
 [[package]]
 name = "rusqlite"
-version = "0.32.1"
+version = "0.33.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7753b721174eb8ff87a9a0e799e2d7bc3749323e773db92e0984debb00019d6e"
+checksum = "1c6d5e5acb6f6129fe3f7ba0a7fc77bca1942cb568535e18e7bc40262baf3110"
 dependencies = [
  "bitflags 2.8.0",
  "fallible-iterator",
@@ -5460,7 +5421,7 @@ checksum = "94143f37725109f92c262ed2cf5e59bce7498c01bcc1502d7b9afe439a4e9f49"
 [[package]]
 name = "script"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "crypto",
  "hex",
@@ -5687,7 +5648,7 @@ dependencies = [
 [[package]]
 name = "serialization"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "hex",
  "rpc-description",
@@ -5701,7 +5662,7 @@ dependencies = [
 [[package]]
 name = "serialization-core"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "parity-scale-codec",
 ]
@@ -5709,7 +5670,7 @@ dependencies = [
 [[package]]
 name = "serialization-tagged"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "serialization-core",
  "serialization-tagged-derive",
@@ -5719,9 +5680,9 @@ dependencies = [
 [[package]]
 name = "serialization-tagged-derive"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "proc-macro2",
  "quote",
  "syn 2.0.96",
@@ -5836,8 +5797,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "34db1a06d485c9142248b7a054f034b349b212551f3dfd19c94d45a754a217cd"
 dependencies = [
  "libc",
- "mio 0.8.11",
- "mio 1.0.3",
+ "mio",
  "signal-hook",
 ]
 
@@ -6025,7 +5985,7 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 [[package]]
 name = "storage"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "common",
  "serialization",
@@ -6036,10 +5996,10 @@ dependencies = [
 [[package]]
 name = "storage-core"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "common",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "logging",
  "thiserror 1.0.69",
  "utils",
@@ -6048,7 +6008,7 @@ dependencies = [
 [[package]]
 name = "storage-inmemory"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "storage-core",
 ]
@@ -6056,7 +6016,7 @@ dependencies = [
 [[package]]
 name = "storage-lmdb"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "lmdb-mintlayer",
  "logging",
@@ -6067,7 +6027,7 @@ dependencies = [
 [[package]]
 name = "storage-sqlite"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "hex",
  "logging",
@@ -6142,7 +6102,7 @@ dependencies = [
 [[package]]
 name = "subsystem"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "async-trait",
  "cfg-if",
@@ -6606,7 +6566,7 @@ checksum = "8f50febec83f5ee1df3015341d8bd429f2d1cc62bcba7ea2076759d315084683"
 [[package]]
 name = "test-rpc-functions"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "async-trait",
  "chainstate",
@@ -6741,7 +6701,7 @@ checksum = "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20"
 [[package]]
 name = "tokens-accounting"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "accounting",
  "chainstate-types",
@@ -6765,7 +6725,7 @@ dependencies = [
  "backtrace",
  "bytes",
  "libc",
- "mio 1.0.3",
+ "mio",
  "pin-project-lite",
  "signal-hook-registry",
  "socket2",
@@ -7090,7 +7050,7 @@ checksum = "e421abadd41a4225275504ea4d6566923418b7f05506fbc9c0fe86ba7396114b"
 [[package]]
 name = "tx-verifier"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "accounting",
  "chainstate-storage",
@@ -7100,7 +7060,7 @@ dependencies = [
  "constraints-value-accumulator",
  "crypto",
  "fallible-iterator",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "logging",
  "mintscript",
  "orders-accounting",
@@ -7124,7 +7084,7 @@ checksum = "0e13db2e0ccd5e14a544e8a246ba2312cd25223f616442d7f2cb0e3db614236e"
 [[package]]
 name = "typename"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "typename-derive",
 ]
@@ -7132,9 +7092,9 @@ dependencies = [
 [[package]]
 name = "typename-derive"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "quote",
  "syn 2.0.96",
 ]
@@ -7303,7 +7263,7 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 [[package]]
 name = "utils"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "anyhow",
  "clap",
@@ -7328,10 +7288,10 @@ dependencies = [
 [[package]]
 name = "utils-networking"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "addr",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "rpc-description",
  "serde_with",
  "thiserror 1.0.69",
@@ -7341,7 +7301,7 @@ dependencies = [
 [[package]]
 name = "utxo"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "chainstate-types",
  "common",
@@ -7428,7 +7388,7 @@ dependencies = [
 [[package]]
 name = "wallet"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "bip39",
  "chainstate",
@@ -7436,7 +7396,7 @@ dependencies = [
  "consensus",
  "crypto",
  "hex",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "logging",
  "mempool",
  "orders-accounting",
@@ -7460,20 +7420,20 @@ dependencies = [
 [[package]]
 name = "wallet-cli-commands"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "async-trait",
  "chainstate",
  "clap",
  "common",
  "consensus",
- "crossterm 0.28.1",
+ "crossterm",
  "crypto",
  "directories",
  "futures",
  "hex",
  "humantime",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "logging",
  "mempool",
  "node-comm",
@@ -7501,7 +7461,7 @@ dependencies = [
 [[package]]
 name = "wallet-controller"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "async-trait",
  "bip39",
@@ -7511,7 +7471,7 @@ dependencies = [
  "consensus",
  "crypto",
  "futures",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "logging",
  "mempool",
  "mempool-types",
@@ -7533,7 +7493,7 @@ dependencies = [
 [[package]]
 name = "wallet-rpc-client"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "async-trait",
  "base64 0.22.1",
@@ -7561,7 +7521,7 @@ dependencies = [
 [[package]]
 name = "wallet-rpc-lib"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -7596,7 +7556,7 @@ dependencies = [
 [[package]]
 name = "wallet-storage"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "bip39",
  "common",
@@ -7614,13 +7574,13 @@ dependencies = [
 [[package]]
 name = "wallet-types"
 version = "1.0.2"
-source = "git+https://github.com/mintlayer/mintlayer-core?rev=2ea4a5c#2ea4a5c903de58775df2d078a8279940657d03e6"
+source = "git+https://github.com/mintlayer/mintlayer-core?rev=75166cb#75166cb25c398e83542c1e4c3e16d7eb0ac347d2"
 dependencies = [
  "bip39",
  "common",
  "crypto",
  "hex",
- "itertools 0.13.0",
+ "itertools 0.14.0",
  "parity-scale-codec",
  "randomness",
  "rpc-description",

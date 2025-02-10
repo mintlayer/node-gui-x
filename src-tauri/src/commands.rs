@@ -23,7 +23,6 @@ use common::{
     address::Address,
     chain::ChainConfig,
     primitives::{BlockCount, BlockHeight},
-    time_getter::TimeGetter,
 };
 use node_gui_backend::{
     error::BackendError,
@@ -32,6 +31,7 @@ use node_gui_backend::{
         DelegateStakingRequest, EncryptionAction, SendDelegateToAddressRequest, SendRequest,
         StakeRequest, WalletId,
     },
+    NodeInitializationOutcome,
 };
 use node_gui_backend::{ImportOrCreate, InitNetwork, WalletMode};
 use wallet_types::wallet_type::WalletType;
@@ -56,13 +56,26 @@ pub async fn initialize_node(
     network: &str,
     mode: &str,
 ) -> Result<ChainInfo, String> {
+    let mut app_state = state.lock().await;
+
     let net_type = match network {
         "Mainnet" => InitNetwork::Mainnet,
         "Testnet" => InitNetwork::Testnet,
+        "Regtest" => InitNetwork::Regtest,
         _ => {
             return Err("Invalid network selection".into());
         }
     };
+
+    let opts = node_lib::OptionsWithResolvedCommand {
+        top_level: app_state.initial_options.top_level.clone(),
+        command: match net_type {
+            InitNetwork::Mainnet => node_lib::Command::Mainnet(Default::default()),
+            InitNetwork::Testnet => node_lib::Command::Testnet(Default::default()),
+            InitNetwork::Regtest => node_lib::Command::Regtest(Default::default()),
+        },
+    };
+
     let wallet_type = match mode {
         "Hot" => WalletMode::Hot,
         "Cold" => WalletMode::Cold,
@@ -71,24 +84,29 @@ pub async fn initialize_node(
         }
     };
 
-    let backend_controls =
-        node_gui_backend::node_initialize(TimeGetter::default(), net_type, wallet_type)
-            .await
-            .map_err(|e| e.to_string())?;
+    let initialization_outcome = node_gui_backend::node_initialize(opts, wallet_type)
+        .await
+        .map_err(|e| e.to_string())?;
 
-    let mut app_state = state.lock().await;
-    app_state.backend_sender = Some(backend_controls.backend_sender);
-    app_state.chain_config = Some(backend_controls.initialized_node.chain_config.clone());
+    match initialization_outcome {
+        NodeInitializationOutcome::BackendControls(backend_controls) => {
+            app_state.backend_sender = Some(backend_controls.backend_sender);
+            app_state.chain_config = Some(backend_controls.initialized_node.chain_config.clone());
 
-    // TODO: reconsider if the task should be joined
-    tokio::spawn(listen_backend_events(
-        app_state.app_handle.clone(),
-        backend_controls.initialized_node.chain_config.clone(),
-        backend_controls.backend_receiver,
-        backend_controls.low_priority_backend_receiver,
-    ));
+            // TODO: reconsider if the task should be joined
+            tokio::spawn(listen_backend_events(
+                app_state.app_handle.clone(),
+                backend_controls.initialized_node.chain_config.clone(),
+                backend_controls.backend_receiver,
+                backend_controls.low_priority_backend_receiver,
+            ));
 
-    Ok(backend_controls.initialized_node.chain_info)
+            Ok(backend_controls.initialized_node.chain_info)
+        }
+        NodeInitializationOutcome::DataDirCleanedUp => {
+            Err("Data dir cleaned up. Restart the application.".into())
+        }
+    }
 }
 
 async fn listen_backend_events(
